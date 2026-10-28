@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Bookish Mind — thoughtful book reviews, reader recommendations, and stories worth getting lost in.">
+<title>The Bookish Mind | Stories Worth Staying For</title>
+<style>
+:root{--ink:#29231f;--muted:#716760;--cream:#fbf7f0;--paper:#fffdf9;--rose:#b96f69;--rose-dark:#8f4f4a;--sage:#78836a;--line:#e9dfd3;--gold:#c69d61}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.65}a{color:inherit;text-decoration:none}.sans{font-family:Arial,Helvetica,sans-serif}.wrap{width:min(1120px,91%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(251,247,240,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-size:1.45rem;font-weight:bold;letter-spacing:-.7px}.brand span{color:var(--rose)}.navlinks{display:flex;align-items:center;gap:26px;font:500 .85rem Arial,sans-serif;color:var(--muted)}.navlinks a:hover{color:var(--rose-dark)}.nav-cta{padding:10px 16px;border:1px solid var(--rose);border-radius:30px;color:var(--rose-dark)!important}
+.hero{padding:78px 0 74px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.eyebrow{font:700 .72rem Arial,sans-serif;letter-spacing:2.6px;text-transform:uppercase;color:var(--rose-dark)}h1{font-size:clamp(3rem,6vw,5.6rem);line-height:.99;letter-spacing:-3px;margin:18px 0 22px;font-weight:500}h1 em{color:var(--rose);font-weight:400}.hero p{max-width:520px;font-size:1.12rem;color:var(--muted)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:3px;font:700 .86rem Arial,sans-serif;transition:.2s}.btn-primary{background:var(--rose-dark);color:white}.btn-primary:hover{background:#713c38;transform:translateY(-2px)}.btn-outline{border:1px solid #cdbcb0}.btn-outline:hover{border-color:var(--rose);color:var(--rose-dark)}
+.hero-art{min-height:440px;position:relative;display:flex;align-items:center;justify-content:center}.sun{position:absolute;width:310px;height:310px;background:#ead9c8;border-radius:50%;right:10%;top:5%}.book-stack{position:relative;width:280px;height:350px;transform:rotate(-5deg)}.book{position:absolute;box-shadow:12px 18px 25px #4c30251c;border-radius:3px 9px 9px 3px;display:flex;flex-direction:column;justify-content:space-between;padding:27px 23px;overflow:hidden}.book:after{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:#ffffff35}.book small{font:700 .62rem Arial,sans-serif;letter-spacing:2px}.book strong{font-size:2.15rem;line-height:1.04;font-weight:500}.book-one{width:220px;height:315px;left:25px;top:10px;background:#9b5e58;color:#fff4e6;transform:rotate(-7deg)}.book-two{width:220px;height:315px;left:80px;top:45px;background:#7c8068;color:#fff9e9;transform:rotate(9deg)}.book-two strong{font-size:1.85rem}.book-three{width:220px;height:315px;left:44px;top:77px;background:#d7b783;color:#44342b;transform:rotate(-1deg)}.book-three strong{font-size:2.4rem}.book-note{position:absolute;bottom:8px;right:0;background:var(--paper);padding:13px 18px;box-shadow:0 8px 30px #39291b12;font-size:.95rem;transform:rotate(3deg)}
+.strip{background:#eee5d9;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0}.strip-inner{display:flex;justify-content:center;gap:38px;flex-wrap:wrap;font:700 .72rem Arial,sans-serif;text-transform:uppercase;letter-spacing:1.7px;color:#786b5f}.strip span:before{content:"✦";color:var(--rose);margin-right:10px}
+section{padding:78px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}.section-head h2,.about h2,.contact h2{font-size:clamp(2.1rem,4vw,3.2rem);line-height:1.08;font-weight:500;letter-spacing:-1.4px;margin:8px 0}.section-head p{color:var(--muted);max-width:390px;margin:0}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.review-card{background:var(--paper);border:1px solid var(--line);padding:17px;transition:.25s}.review-card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #35261a0c}.cover{height:225px;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;overflow:hidden;text-align:center}.cover:before{content:"";position:absolute;width:190px;height:190px;border:1px solid #ffffff66;border-radius:50%}.cover span{position:relative;max-width:180px;font-size:1.8rem;line-height:1.08}.cover small{position:absolute;bottom:16px;left:0;right:0;font:700 .58rem Arial,sans-serif;letter-spacing:2px}.cover-a{background:#c8b49b;color:#49382c}.cover-b{background:#6c7765;color:#fff8e9}.cover-c{background:#b86f68;color:#fff7ed}.review-meta{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:18px;font:700 .68rem Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;color:var(--rose-dark)}.review-card h3{font-size:1.45rem;line-height:1.2;font-weight:500;margin:9px 0}.review-card p{font-size:.96rem;color:var(--muted);margin:0 0 14px}.read-link{font:700 .8rem Arial,sans-serif;border-bottom:1px solid var(--rose);padding-bottom:3px}
+.about{background:#eee5d9}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.about-art{min-height:330px;background:#d6c2a9;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.about-art:before,.about-art:after{content:"";position:absolute;border:1px solid #9c8266;border-radius:50%;width:260px;height:260px}.about-art:after{width:190px;height:190px}.quote{position:relative;z-index:1;font-size:2.1rem;text-align:center;line-height:1.18;max-width:250px;color:#493b30}.about p{color:var(--muted);font-size:1.04rem}.values{display:flex;gap:20px;flex-wrap:wrap;margin-top:24px}.value{border-top:1px solid #c9b7a3;padding-top:10px;min-width:130px}.value strong{display:block;font-size:1.05rem}.value span{font: .75rem Arial,sans-serif;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.service{padding:25px;border:1px solid var(--line);background:var(--paper)}.service .num{font:700 .75rem Arial,sans-serif;color:var(--rose)}.service h3{font-size:1.35rem;font-weight:500;margin:10px 0 7px}.service p{font-size:.94rem;color:var(--muted);margin:0}
+.contact{background:#302923;color:#fff8ef}.contact .eyebrow{color:#e4b2a8}.contact h2{max-width:650px}.contact p{color:#d0c4b8;max-width:600px}.contact-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:28px}.contact .btn-outline{border-color:#9e8d7d;color:#fff8ef}.contact .btn-outline:hover{border-color:#e4b2a8;color:#e4b2a8}
+footer{padding:25px 0;background:#26211d;color:#c6b8aa;font: .78rem Arial,sans-serif}.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-links{display:flex;gap:18px}
+@media(max-width:760px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.navlinks{gap:15px;flex-wrap:wrap}.hero{padding:48px 0 50px;grid-template-columns:1fr;gap:10px}.hero-art{min-height:360px}.sun{width:250px;height:250px;right:15%}.book-stack{transform:scale(.85) rotate(-3deg)}.section-head{align-items:flex-start;flex-direction:column}.reviews,.services{grid-template-columns:1fr}.cover{height:240px}.about-grid{grid-template-columns:1fr;gap:30px}.about-art{min-height:270px}section{padding:58px 0}.strip-inner{gap:15px 24px;font-size:.63rem}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">the_bookish<span>_mind</span></a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#reviews">Book Reviews</a><a href="#about">About</a><a href="#collaborate">Collaborate</a><a class="nav-cta" href="#contact">Get in touch ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">A little corner for book lovers</div>
+      <h1>Stories worth<br><em>staying for.</em></h1>
+      <p>Honest thoughts, thoughtful reviews, and bookish discoveries for readers who love getting lost between the pages.</p>
+      <div class="actions"><a class="btn btn-primary" href="#reviews">Explore reviews ↗</a><a class="btn btn-outline" href="#about">Meet the reader</a></div>
+    </div>
+    <div class="hero-art" aria-label="Decorative illustration of three books">
+      <div class="sun"></div><div class="book-stack">
+        <div class="book book-one"><small>THE BOOKISH MIND</small><strong>Words<br>that<br>stay.</strong><small>A READER'S JOURNAL</small></div>
+        <div class="book book-two"><small>READ • FEEL • REMEMBER</small><strong>Between<br>the lines</strong><small>NOTES ON STORIES</small></div>
+        <div class="book book-three"><small>THE BOOKISH MIND</small><strong>One more<br>chapter.</strong><small>ALWAYS, A READER</small></div>
+      </div><div class="book-note">☕ Books, feelings & late nights</div>
+    </div>
+  </section>
+  <div class="strip"><div class="wrap strip-inner"><span>Thoughtful reviews</span><span>Reader-first recommendations</span><span>Stories that stay with you</span></div></div>
+  <section class="wrap" id="reviews">
+    <div class="section-head"><div><div class="eyebrow">From the reading journal</div><h2>Recently on the shelf</h2></div><p>A few featured reads from the bookish world. Replace these sample cards with your latest reviews and favourite titles.</p></div>
+    <div class="reviews">
+      <article class="review-card"><div class="cover cover-a"><span>Where<br>the heart<br>wanders</span><small>A STORY OF BECOMING</small></div><div class="review-meta"><span>Fiction</span><span>★ ★ ★ ★ ☆</span></div><h3>For the quiet, reflective reader</h3><p>A sample review space for the books that make you pause, underline a sentence, and think about it long after the last page.</p><a class="read-link" href="#contact">Read the review ↗</a></article>
+      <article class="review-card"><div class="cover cover-b"><span>The art<br>of starting<br>again</span><small>GROWTH • CHANGE • HOPE</small></div><div class="review-meta"><span>Non-fiction</span><span>★ ★ ★ ★ ★</span></div><h3>A little perspective goes a long way</h3><p>Use this space for your takeaways, favourite themes, and who you think would enjoy this book most.</p><a class="read-link" href="#contact">Read the review ↗</a></article>
+      <article class="review-card"><div class="cover cover-c"><span>All the<br>things we<br>never said</span><small>LOVE • LOSS • LIFE</small></div><div class="review-meta"><span>Contemporary</span><span>★ ★ ★ ★ ☆</span></div><h3>When a story gets under your skin</h3><p>Share what worked for you, what surprised you, and the feeling you carried away from the final chapter.</p><a class="read-link" href="#contact">Read the review ↗</a></article>
+    </div>
+  </section>
+  <section class="about" id="about"><div class="wrap about-grid">
+    <div class="about-art"><div class="quote">“A book is a little world you get to keep.”</div></div>
+    <div><div class="eyebrow">Hello, fellow reader</div><h2>More than a rating.<br>A real reading experience.</h2><p>Welcome to <strong>The Bookish Mind</strong> — a space built around stories, the emotions they leave behind, and the conversations they start. Here you'll find thoughtful reflections, reader-friendly recommendations, and a genuine love for books across genres.</p><p>Whether you're searching for your next favourite read or you're an author hoping to introduce your story to new readers, I'm glad you're here.</p><div class="values"><div class="value"><strong>Reader-first</strong><span>Always</span></div><div class="value"><strong>Thoughtful</strong><span>Not just a star rating</span></div><div class="value"><strong>Book-loving</strong><span>Every genre has a story</span></div></div></div>
+  </div></section>
+  <section class="wrap" id="collaborate"><div class="section-head"><div><div class="eyebrow">For authors & publishers</div><h2>Let's share a story.</h2></div><p>Have a book you'd love to introduce to readers? Let's discuss a collaboration that fits your book and goals.</p></div>
+    <div class="services">
+      <div class="service"><div class="num">01 / REVIEWS</div><h3>Book review features</h3><p>Thoughtful, clearly labelled reviews that share a reader's perspective and help the right audience discover your book.</p></div>
+      <div class="service"><div class="num">02 / SOCIAL</div><h3>Instagram features</h3><p>Bookish visuals and captions designed to introduce your title to a community of readers.</p></div>
+      <div class="service"><div class="num">03 / AUTHORS</div><h3>Author collaborations</h3><p>Open to discussing review copies, launch features, interviews, and other creative book-related projects.</p></div>
+    </div>
+    <p style="font-size:.88rem;color:var(--muted);margin-top:18px">Editorial note: Reviews reflect genuine reading impressions. Any paid or gifted collaboration should be disclosed clearly, and payment never guarantees a positive opinion.</p>
+  </section>
+  <section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Your next chapter starts here</div><h2>Have a book in mind?<br>I'd love to hear from you.</h2><p>For author enquiries, review opportunities, or simply to talk books, reach out through Instagram.</p><div class="contact-row"><div><strong style="font-size:1.2rem">The Bookish Mind</strong><div style="color:#c6b8aa;font: .88rem Arial,sans-serif">@the_bookish_mind</div></div><div class="actions"><a class="btn btn-primary" href="https://www.instagram.com/the_bookish_mind/" target="_blank" rel="noopener noreferrer">Message on Instagram ↗</a><a class="btn btn-outline" href="#home">Back to top ↑</a></div></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year">2026</span> The Bookish Mind. Made for the love of stories.</span><div class="footer-links"><a href="#reviews">Reviews</a><a href="#about">About</a><a href="#contact">Contact</a></div></div></footer>
+</body>
+</html>
